@@ -1,6 +1,6 @@
 // this class is for error handling when calling the api or somthing went wrng in api
 class ApiError extends Error{
-    constructor(statusCode, message = "something went wrong !", errors= [], stack = "" ){
+     constructor(statusCode, message = "something went wrong !", errors= [], stack = "" ){
         super(message) // overirde the default Error constructor message with my message
         this.statusCode = statusCode  // override the status code default with my status code
         this.data = null
@@ -15,3 +15,6 @@ class ApiError extends Error{
         }
     }
 }
+
+
+export {ApiError}
