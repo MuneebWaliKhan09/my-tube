@@ -60,6 +60,7 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
+// (isPasswordCorrect )can be accessible through the user you have already find and and from this user you can access (isPasswordCorrect) method
 userSchema.methods.isPasswordCorrect = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
